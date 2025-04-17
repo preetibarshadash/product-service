@@ -1,5 +1,6 @@
 package com.preeti.product_service.controller;
 
+import com.preeti.product_service.model.ProductInput;
 import com.preeti.product_service.model.Products;
 import com.preeti.product_service.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +29,7 @@ public class ProductController {
     }
 
     @PostMapping("/create")
-    ResponseEntity<?> save(@RequestBody Products product) {
+    ResponseEntity<?> save(@RequestBody ProductInput product) {
         return new ResponseEntity<>(service.save(product), HttpStatus.OK);
     }
 }

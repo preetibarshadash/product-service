@@ -3,8 +3,20 @@ type Query {
     getProductById(id: String!): Product
 }
 
+type Mutation {
+createProduct(input: ProductInput!): Product
+}
+
+input ProductInput {
+name: String!
+description: String!
+price: Float!
+stock: Int!
+}
+
+
 type Product {
-    id: ID!
+    id: ID
     name: String
     description: String
     price: Float
