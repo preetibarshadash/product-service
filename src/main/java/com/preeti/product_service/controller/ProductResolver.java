@@ -1,4 +1,4 @@
-package com.preeti.product_service;
+package com.preeti.product_service.controller;
 
 import com.preeti.product_service.model.ProductInput;
 import com.preeti.product_service.model.Products;
